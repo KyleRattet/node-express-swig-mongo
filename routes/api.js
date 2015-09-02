@@ -17,7 +17,8 @@ router.post('/superheros', function(req, res) {
   new Superhero(req.body)
   .save(function(err, superhero) {
     // console.log(superhero);
-    res.json({message: 'Success!'});
+    res.json({message: 'Success!',
+              name:name});
   });
 });
 

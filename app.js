@@ -15,6 +15,10 @@ var methodOverride = require('method-override');
 
 var app = express();
 
+//seed database
+var databaseSeed = require('./seed');
+databaseSeed();
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 var swig = new swig.Swig();
